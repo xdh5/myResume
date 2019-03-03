@@ -1,0 +1,214 @@
+body{
+    background-color: #EFEFEF;
+    margin: 0;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li,ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.clearfix::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+.icon {
+    vertical-align: -0.15em;
+    overflow: hidden;
+}
+.topNavBar{
+    padding: 20px 16px 20px 16px;
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    opacity: 0.95;    
+}
+.topNavBar .logo{
+    float: left;
+    font: bold 22px "Arial Black";
+}
+.topNavBar .logo .rs{
+    color: #e6686a;
+    margin-right: 4px;
+}
+.topNavBar .logo .card{
+    color: #9A9DA2;
+}
+.topNavBar nav ul li{
+    float: right;
+    display: block;
+    margin: 0 17px;   
+    padding-top: 12px;
+}
+.topNavBar nav ul li a{
+    border-bottom: 3px solid transparent;
+    padding-bottom: 10px;
+    color: #b7b7b7;
+    font-weight: bold;
+}
+.topNavBar nav ul li a:hover{
+    border-bottom: 3px solid #DC6465;
+}
+.banner{
+    background-image: url("../img/banner.jpg");
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+}
+.userCard{
+    max-width: 940px;
+    margin:-400px auto 0px auto;
+    padding: 50px;
+    background-color:white;
+    box-shadow: -1px 1px 1px 0px gray;
+}
+.picture img{
+    float: left;
+    width: 299px;
+    height: 347px;
+}
+.text{
+    margin-left: 100px;
+    float: left;
+    vertical-align: top;
+}
+.text .hello{
+    background-color: #DC6465;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: white;
+    line-height: 30px;
+}
+.text .trangle{
+    display:block;
+    margin-left: 5px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid  #DC6465;
+    border-right: 10px solid transparent;
+}
+.text h2{
+    font-weight: normal;
+    margin: 0px;
+}
+.text hr{
+    margin: 15px 0;
+    color:#A0A3AA;
+}
+.text table{
+    font-size: 16px;
+    text-align: left;
+}
+.text th{
+    padding: 5px 0;
+    width: 150px;
+}
+.text td{
+    color: #A0A3AA;
+    padding: 5px 0;
+    width: 300px;
+}
+footer{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 25px 50px;
+    background-color:#DC6465;
+}
+footer svg{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    fill: white;
+    vertical-align: top;
+    border: 1px solid transparent;
+    border-radius: 100%;  
+}
+footer svg:hover{
+    background-color: #CF5D5F;
+}
+.download{
+    width: 200px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid gray;
+    border-radius: 5px; 
+}
+.download a{
+    font-size: 20px;
+}
+.introduction{
+    font: 16px "KaiTi";
+    text-align: center;
+}
+.skills>p{
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: center;
+}
+.skills>div{
+    max-width: 940px;
+    padding: 50px;
+    background-color: white;
+    margin: 20px auto;
+}
+.skills li{
+    float: left;
+    width: 42%;
+    margin: 35px 0px;
+}
+.skills li:nth-child(even){
+    float: right;
+    width: 42%;
+    margin: 35px 0px;
+}
+.skills .bar-data{
+    font: 20px;
+    line-height: 30px;
+}
+.skills .bar-line{
+    height: 5px;
+    background-color: #FAE1E1;
+    border-radius: 3px;
+    width: 100%;
+}
+.skills .bar-line>div{
+    height: 5px;
+    width: 80%;
+    background-color: #E8676B;
+    border-radius: 3px;
+}
+.portfolio{
+    max-width: 1040px;
+    margin: 30px auto;
+    background-color: #EFEFEF;
+    text-align: center;
+}
+.portfolio .bar span{
+    font: 16px bold;
+    margin:30px;
+}
+.portfolio .bar{
+    display: inline-block;
+}
+.portfolio .bar-line{
+    height: 5px;
+    background-color: #FAE1E1;
+    border-radius: 3px;
+    margin: 10px 0;
+}
+.portfolio .bar-line div{
+    height: 5px;
+    border-radius: 3px;
+}
+.portfolio .works>div{
+    display: inline-block;
+}
