@@ -3,15 +3,26 @@
 <head>
     <meta charset="utf-8">
     <title>我的简历</title>
-    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="css\main.css">
-    <script src="script/main.js"></script>
-    <script src="//at.alicdn.com/t/font_1052891_gqav09p2m35.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css\animation.css">
 </head>
 <body>
-    <div class="topNavBar clearfix">
+    <div id="loading" class="wrapper">
+      <div class="loader">
+          <div class="square" ></div>
+          <div class="square"></div>
+          <div class="square last"></div>
+          <div class="square clear"></div>
+          <div class="square"></div>
+          <div class="square last"></div>
+          <div class="square clear"></div>
+          <div class="square "></div>
+          <div class="square last"></div>
+      </div>
+    </div>
+    <div id="topNavBar" class="topNavBar clearfix">
         <a class="logo" href="#" alt="logo">
-          <span class="rs">RS</span><span class="card">card</span>
+          <span class="logoMy">我的</span><span class="logoResume">简历</span>
         </a>
         <nav>
           <ul class="clearfix">
@@ -20,21 +31,21 @@
             <li><a href="#">日历</a></li>
             <li><a href="#">博客</a></li>
             <li><a href="#">作品</a></li>
-            <li><a href="#">技能</a></li>
-            <li><a href="#">关于</a></li>
+            <li><a href="#siteIntroduction">技能</a></li>
+            <li><a href="#siteAbout">关于</a></li>
           </ul>
         </nav>
     </div>
     <div class="banner">
       <div class="mask"></div>
     </div>
-    <main>
+    <main id="siteAbout">
       <div class="userCard clearfix">
         <div class="picture">
           <img src="img\photo.jpg" alt="照片">
         </div>
         <div class="text">
-          <span class="hello">Hello</span>
+          <span class="hello">HelloWorld</span>
           <span class="trangle"></span>
           <h1>赵之毓</h1>
           <h2>前端开发工程师</h2>
@@ -42,15 +53,15 @@
           <table>
             <tr>
               <th>年龄</th>
-              <td>18</td>
+              <td>24</td>
             </tr>
             <tr>
-              <th>所在地</th>
-              <td>西安</td>
+              <th>学校</th>
+              <td>西安电子科技大学</td>
             </tr>
             <tr>
               <th>邮箱</th>
-              <td>zhaozy086@gmail.com</td>
+              <td>zhaozy086@163.com</td>
             </tr>
             <tr>
               <th>手机</th>
@@ -64,9 +75,19 @@
         </div>
       </div>
       <footer class="media">
-        <a href="javascript:;">
+        <a href="https://github.com/yolksusu" target="_blank">
           <svg class="icon" aria-hidden="true">
             <use xlink:href="#icon-github"></use>
+          </svg>
+        </a>
+        <a href="https://www.jianshu.com/u/24346b9bf5d0" target="_blank">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-yanzheng-jianshu"></use>
+            </svg>
+        </a>
+        <a href="mailto:zhaozy086@163.com">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-youxiang"></use>
           </svg>
         </a>
       </footer>
@@ -75,7 +96,7 @@
       <div class="download">
         <a href="../yinyang.html" download>下载简历</a>
       </div>
-      <div class="introduction">
+      <div  id="siteIntroduction" class="introduction">
         <p>
           你好，我是赵之毓。资深前端工程师，曾任职谷歌，擅长前端开发，node.js开发。
         </p>
@@ -137,6 +158,8 @@
             </div>
           </div>
       </div>
-    </section> 
+    </section>
+    <script src="//at.alicdn.com/t/font_1052891_nso2phbzcn.js"></script>
+    <script src="script/main.js"></script>
 </body>
 </html>

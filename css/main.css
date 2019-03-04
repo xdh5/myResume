@@ -1,43 +1,31 @@
-body{
-    background-color: #EFEFEF;
-    margin: 0;
-    font-size: 12px;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-li,ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.clearfix::after{
-    content: " ";
-    display: block;
-    clear: both;
-}
-.icon {
-    vertical-align: -0.15em;
-    overflow: hidden;
-}
+*{margin: 0;padding: 0}
+body{background-color: #EFEFEF;font-size: 12px;}
+a{text-decoration: none;color: inherit;}
+li,ul{list-style: none;}
+.clearfix::after{content: " ";display: block;clear: both;}
+.icon {width: 2em; height: 2em;vertical-align: -0.15em;fill: white;color:white;overflow: hidden;
+ }
+/* 加载动画 */
+.wrapper{background-color: white;position:fixed;padding:0;margin:0;top:0;left:0;width: 100%;
+        height: 100%;z-index: 10;}
+.loader{width: 90px;height: 90px;}
+/* 导航栏 */
 .topNavBar{
-    padding: 20px 16px 20px 16px;
-    background-color: white;
-    position: -webkit-sticky;
-    position: sticky;
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
     top: 0;
-    opacity: 0.95;    
+    transition: background-color linear 0.3s;
 }
 .topNavBar .logo{
     float: left;
-    font: bold 22px "Arial Black";
+    font: bold 20px "Arial Black";
 }
-.topNavBar .logo .rs{
-    color: #e6686a;
-    margin-right: 4px;
+.topNavBar .logo .logoMy{
+    color: #1fbeca;
+    margin: 0 5px 0 20px;
 }
-.topNavBar .logo .card{
+.topNavBar .logo .logoResume{
     color: #9A9DA2;
 }
 .topNavBar nav ul li{
@@ -49,29 +37,27 @@ li,ul{
 .topNavBar nav ul li a{
     border-bottom: 3px solid transparent;
     padding-bottom: 10px;
-    color: #b7b7b7;
+    color: #1fbeca;
     font-weight: bold;
+    position: relative;
 }
-.topNavBar nav ul li a:hover{
-    border-bottom: 3px solid #DC6465;
-}
+/* 关于 */
 .banner{
-    background-image: url("../img/banner.jpg");
-    height: 600px;
+    background-image: url("../img/earth.jpg");
+    height: 500px;
     background-position: center;
     background-size: cover;
 }
 .userCard{
-    max-width: 940px;
-    margin:-400px auto 0px auto;
+    max-width: 850px;
+    margin:-300px auto 0px auto;
     padding: 50px;
     background-color:white;
-    box-shadow: -1px 1px 1px 0px gray;
 }
 .picture img{
     float: left;
-    width: 299px;
-    height: 347px;
+    width: 250px;
+    height: 300px;
 }
 .text{
     margin-left: 100px;
@@ -79,7 +65,7 @@ li,ul{
     vertical-align: top;
 }
 .text .hello{
-    background-color: #DC6465;
+    background-color: #1fbeca;
     padding: 5px 15px;
     font-size: 16px;
     color: white;
@@ -90,10 +76,15 @@ li,ul{
     margin-left: 5px;
     width: 0;
     height: 0;
-    border-top: 10px solid  #DC6465;
+    border-top: 10px solid  #1fbeca;
     border-right: 10px solid transparent;
 }
+.text h1{
+    font-size: 22px;
+    margin: 10px 0;
+}
 .text h2{
+    font-size: 16px;
     font-weight: normal;
     margin: 0px;
 }
@@ -102,37 +93,33 @@ li,ul{
     color:#A0A3AA;
 }
 .text table{
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
 }
 .text th{
     padding: 5px 0;
-    width: 150px;
+    width: 100px;
 }
 .text td{
     color: #A0A3AA;
     padding: 5px 0;
-    width: 300px;
+    width: 250px;
 }
 footer{
-    max-width: 940px;
+    max-width: 850px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding: 25px 50px;
-    background-color:#DC6465;
+    padding: 5px 50px;
+    background-color:#1fbeca;
 }
 footer svg{
-    width: 30px;
-    height: 30px;
-    padding: 10px;
-    fill: white;
+    padding: 10px 0;
+    margin: 0 20px;
     vertical-align: top;
-    border: 1px solid transparent;
-    border-radius: 100%;  
 }
 footer svg:hover{
-    background-color: #CF5D5F;
+    background-color: #1fbeca;
 }
 .download{
     width: 200px;
@@ -183,7 +170,7 @@ footer svg:hover{
 .skills .bar-line>div{
     height: 5px;
     width: 80%;
-    background-color: #E8676B;
+    background-color: #1fbeca;
     border-radius: 3px;
 }
 .portfolio{
