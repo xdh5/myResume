@@ -46,3 +46,21 @@
     animation: navSlideLeave 0.2s forwards;
     background-color: #1fbeca;
 }
+.enterHighlight::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 80%;
+    height: 3px;
+    animation: navSlideEnter 0.2s forwards;
+    background-color: #1fbeca;
+}
+.leaveHighlight::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 80%;
+    height: 3px;
+    animation: navSlideLeave 0.2s forwards;
+    background-color: #1fbeca;
+}

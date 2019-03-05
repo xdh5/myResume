@@ -26,12 +26,12 @@
         </a>
         <nav>
           <ul class="clearfix">
-            <li><a href="#">其他</a></li>
+            <!-- <li><a href="#">其他</a></li>
             <li><a href="#">联系方式</a></li>
             <li><a href="#">日历</a></li>
-            <li><a href="#">博客</a></li>
-            <li><a href="#">作品</a></li>
-            <li><a href="#siteIntroduction">技能</a></li>
+            <li><a href="#">博客</a></li> -->
+            <li><a href="#portfolio">作品</a></li>
+            <li><a href="#skills">技能</a></li>
             <li><a href="#siteAbout">关于</a></li>
           </ul>
         </nav>
@@ -39,8 +39,8 @@
     <div class="banner">
       <div class="mask"></div>
     </div>
-    <main id="siteAbout">
-      <div class="userCard clearfix">
+    <div id="siteAbout">
+      <main class="userCard clearfix">
         <div class="picture">
           <img src="img\photo.jpg" alt="照片">
         </div>
@@ -73,7 +73,7 @@
             </tr> 
           </table>
         </div>
-      </div>
+      </main>
       <footer class="media">
         <a href="https://github.com/yolksusu" target="_blank">
           <svg class="icon" aria-hidden="true">
@@ -91,75 +91,76 @@
           </svg>
         </a>
       </footer>
-    </main>
-    <section>
-      <div class="download">
-        <a href="../yinyang.html" download>下载简历</a>
-      </div>
-      <div  id="siteIntroduction" class="introduction">
-        <p>
-          你好，我是赵之毓。资深前端工程师，曾任职谷歌，擅长前端开发，node.js开发。
-        </p>
-      </div>
-      <div class="skills">
-        <p>专业技能</p>
-        <div>
-          <ul class="clearfix">
-            <li>
-              <div class="bar-data">HTML</div>
-              <div class="bar-line">
-                <div></div>
-              </div>
-            </li>
-            <li>
-              <div class="bar-data">CSS</div>
-              <div class="bar-line">
-                <div></div>
-              </div>
-            </li>
-            <li>
-              <div class="bar-data">Javascript</div>
-              <div class="bar-line">
-                <div></div>
-              </div>
-            </li>
-            <li>
-              <div class="bar-data">Vue.js</div>
-              <div class="bar-line">
-                <div></div>
-              </div>
-            </li>
-          </ul>
+      <section>
+        <div class="download">
+          <a href="../yinyang.html" download>下载简历</a>
         </div>
-      </div>
-      <div class="portfolio">
-          <h1>
-            我的作品集
-          </h1>
-          <div class="bar">
-            <span id="bar1">所有</span>
-            <span id="bar2">vue.js</span>
-            <span id="bar3">React</span>
+        <div class="introduction">
+          <p>
+            你好，我是赵之毓。资深前端工程师，曾任职谷歌，擅长前端开发，node.js开发。
+          </p>
+        </div>
+      </section>
+    </div>
+    <div id="skills" class="skills">
+      <p>专业技能</p>
+      <div>
+        <ul class="clearfix">
+          <li>
+            <div class="bar-data">HTML</div>
             <div class="bar-line">
-              <div></div>
+              <div id="80%"></div>
             </div>
-          </div>
-          <div class="works clearfix">
-            <div>
-              <img witdh=200px height=400px src="img\1.jpg" alt="1">
+          </li>
+          <li>
+            <div class="bar-data">CSS</div>
+            <div class="bar-line">
+              <div id="70%"></div>
             </div>
-            <div>
-              <div>
-                <img witdh=198px height=198px src="img\2.jpg" alt="2">
-              </div>
-              <div>
-                <img witdh=198px height=198px src="img\3.jpg" alt="3">
-              </div>
+          </li>
+          <li>
+            <div class="bar-data">Javascript</div>
+            <div class="bar-line">
+              <div id="60%"></div>
             </div>
-          </div>
+          </li>
+          <li>
+            <div class="bar-data">Vue.js</div>
+            <div class="bar-line">
+              <div id="70%"></div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+    <div id="portfolio" class="portfolio">
+        <h1>
+          我的作品集
+        </h1>
+        <div class="bar">
+          <span id="bar1">所有</span>
+          <span id="bar2">vue.js</span>
+          <span id="bar3">React</span>
+          <div class="bar-line">
+            <div></div>
+          </div>
+        </div>
+        <div class="works clearfix">
+          <div>
+            <img witdh=200px height=400px src="img\1.jpg" alt="1">
+          </div>
+          <div>
+            <div>
+              <img witdh=198px height=198px src="img\2.jpg" alt="2">
+            </div>
+            <div>
+              <img witdh=198px height=198px src="img\3.jpg" alt="3">
+            </div>
+          </div>
+        </div>
+    </div>
     <script src="//at.alicdn.com/t/font_1052891_nso2phbzcn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
     <script src="script/main.js"></script>
 </body>
 </html>

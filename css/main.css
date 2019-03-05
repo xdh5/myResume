@@ -15,7 +15,7 @@ li,ul{list-style: none;}
     width: 100%;
     position: fixed;
     top: 0;
-    transition: background-color linear 0.3s;
+    transition: linear 0.3s;
 }
 .topNavBar .logo{
     float: left;
@@ -136,13 +136,14 @@ footer svg:hover{
     font: 16px "KaiTi";
     text-align: center;
 }
+/* 技能 */
 .skills>p{
     margin: 20px 0;
     font-size: 20px;
     text-align: center;
 }
 .skills>div{
-    max-width: 940px;
+    max-width: 850px;
     padding: 50px;
     background-color: white;
     margin: 20px auto;
@@ -163,16 +164,17 @@ footer svg:hover{
 }
 .skills .bar-line{
     height: 5px;
-    background-color: #FAE1E1;
+    background-color: #bff9fa;
     border-radius: 3px;
     width: 100%;
 }
 .skills .bar-line>div{
     height: 5px;
-    width: 80%;
-    background-color: #1fbeca;
     border-radius: 3px;
+    width: 0%;
+    transition: width 0.5s;
 }
+/* 作品 */
 .portfolio{
     max-width: 1040px;
     margin: 30px auto;
@@ -188,7 +190,7 @@ footer svg:hover{
 }
 .portfolio .bar-line{
     height: 5px;
-    background-color: #FAE1E1;
+    background-color: #bff9fa;
     border-radius: 3px;
     margin: 10px 0;
 }
