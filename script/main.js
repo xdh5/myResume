@@ -87,17 +87,79 @@ function barLineSlide(){
     }
 }
 
-// $(function(){
-//     $(".bar>span").click(function(){
-//         var i = $(this).attr("id").substr(3);
-//         if(i==1){
-//             $(".portfolio .bar-line>div").css({"width":"40%","background-color":"#E8676B","margin-left":"0%"})
-//         }
-//         else if(i==2){
-//             $(".portfolio .bar-line>div").css({"width":"30%","background-color":"#E8676B","margin-left":"40%"})
-//         }
-//         else{
-//             $(".portfolio .bar-line>div").css({"width":"30%","background-color":"#E8676B","margin-left":"70%"})
-//         }
-//     })
-// })
+//轮播
+document.addEventListener("visibilitychange", function(){
+    if(document.hidden){
+        clearInterval(setTimer)
+    }
+    else{
+        setTimer = setInterval(setSlide,2000)
+    }
+})
+var slideTip = document.querySelectorAll(".slideTip")
+var images = document.querySelector("#images")
+images.style.marginLeft = "0px"
+setInterval(action, 0)
+selectImages()
+nextImages()
+slide()
+function action(){
+    for(let i=0;i<slideTip.length;i++){
+        if(parseInt(images.style.marginLeft) == -940*i){
+            var action = document.querySelector(".action")
+            action.classList.remove("action")
+            slideTip[i].classList.add("action")
+        }   
+    }
+}
+function selectImages(){
+    for(let i = 0;i<slideTip.length;i++){
+        slideTip[i].onclick = function(){
+            images.style.marginLeft = -940*i+"px"
+        }
+    }
+}
+function nextImages(){
+    var pre = document.querySelector("#pre")
+    var next = document.querySelector("#next")
+    pre.onclick=function(){
+        images.style.marginLeft = parseInt(images.style.marginLeft)+940+"px"
+        if(parseInt(images.style.marginLeft)>0){
+            images.style.marginLeft = -940*(slideTip.length-1) +"px"
+        }
+    }
+    next.onclick=function(){
+        images.style.marginLeft = parseInt(images.style.marginLeft)-940+"px"
+        if(parseInt(images.style.marginLeft)<-940*(slideTip.length-1)){
+            images.style.marginLeft = "0px"
+        }
+    }
+}
+function slide(){
+    function setTimer(){
+        var action = document.querySelector(".action")
+        var children = action.parentNode.children
+        var n
+        for(i =0;i<children.length;i++){
+            if(action === slideTip[i]){
+                n=i
+                break
+            }
+        }
+        if(n >= slideTip.length-1){
+            n = 0
+        }
+        else{
+            n = n+1
+        }
+        images.style.marginLeft = -940*n+"px"
+    }
+    var circle = setInterval(setTimer, 3000)
+    var stopSlide = document.querySelector(".stopSlide")
+    stopSlide.onmouseleave = function(){
+        circle = setInterval(setTimer, 3000)
+    }
+    stopSlide.onmouseenter = function(){
+        window.clearInterval(circle)
+    }
+}
