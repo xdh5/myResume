@@ -16,7 +16,7 @@ li,ul{list-style: none;}
     position: fixed;
     top: 0;
     transition: linear 0.3s;
-    z-index: 1;
+    z-index: 100;
 }
 .topNavBar .logo{
     float: left;
@@ -194,52 +194,7 @@ section{
     font-size: 20px;
     text-align: center;
 }
-.portfolio .window{
-    margin: 30px auto;
-    max-width: 940px;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-}
-.portfolio .images{
-    display: inline-flex;
-    transition: all 1s;
-  }
-.portfolio .images > img{
-    max-width: 940px;
-    height: 400px;
-}
-.portfolio .images svg:nth-child(1){
-    left: 50px;
-    top:50%;
-    position: absolute;
-    fill:white;
-    cursor: pointer;
-}
-.portfolio .images svg:nth-child(2){
-    position: absolute;
-    top:50%;
-    right:50px;
-    transform:scaleX(-1);
-    fill:white;
-    cursor: pointer;
-}
-.portfolio ul{
-    margin:-80px auto 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-.portfolio .slideTip{
-    background-color: white;
-    list-style: none;
-    display: inline-block;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    cursor: pointer;
-    margin: 0 5px;
-}
-.action{
-    transform: scale(1.2)
+.swiper-container {
+    width: 600px;
+    height: 300px;
 }

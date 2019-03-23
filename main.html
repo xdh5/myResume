@@ -5,6 +5,7 @@
     <title>我的简历</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css\main.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css\animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 </head>
 <body>
     <div id="loading" class="wrapper">
@@ -137,31 +138,28 @@
         <p>
           我的作品集
         </p>
-        <div class="window stopSlide">
-            <div class="images" id=images>
-                <svg id="pre" class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-qian"></use>
-                </svg>
-                <svg id="next" class="icon" aria-hidden="true">
-                    <use xlink:href="#icon-qian"></use>
-                </svg>
-                <img src="img\1.png" alt="">
-                <img src="img\2.png" alt="">
-                <img src="img\3.png" alt="">
-                <img src="img\4.png" alt="">
-                <img src="img\5.png" alt="">
-            </div>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <img src="img/1.png" class="swiper-slide">
+              <img src="img/2.png" class="swiper-slide">
+              <img src="img/3.png" class="swiper-slide">
+              <img src="img/4.png" class="swiper-slide">
+              <img src="img/5.png" class="swiper-slide">
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
-        <ul>
-            <li class="slideTip action"></li>
-            <li class="slideTip"></li>
-            <li class="slideTip"></li>
-            <li class="slideTip"></li>
-            <li class="slideTip"></li>
-        </ul>
     </div>
     <script src="//at.alicdn.com/t/font_1052891_tuw8m4htim.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
     <script src="script/main.js"></script>
 </body>
 </html>
