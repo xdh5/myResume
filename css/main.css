@@ -145,7 +145,7 @@ section{
 .skills{
     margin:80px 0;
 }
-.skills>p{
+.title{
     margin: 20px 0;
     font-size: 20px;
     text-align: center;
@@ -189,12 +189,25 @@ section{
     background-color: #EFEFEF;
     text-align: center;
 }
-.portfolio p{
-    margin: 20px 0;
-    font-size: 20px;
-    text-align: center;
-}
 .swiper-container {
     width: 600px;
     height: 300px;
+}
+/* 留言 */
+#message{
+    max-width: 1040px;
+    margin: 80px auto;
+}
+.message{
+    text-align: center;
+}
+.messageList{
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: white;
+}
+.messageList ul li{
+    padding: 10px;
+    border-bottom: 1px solid #EFEFEF;
 }

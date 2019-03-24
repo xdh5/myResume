@@ -107,3 +107,46 @@ var mySwiper = new Swiper ('.swiper-container', {
       prevEl: '.swiper-button-prev',
     },
 })
+//留言板
+var APP_ID = 'bIbSPV8ltG9IPrIfzoAx4XQH-gzGzoHsz';
+var APP_KEY = 'II0ANcGFRzA9QfwEzrIeuG5j';
+
+AV.init({
+  appId: APP_ID,
+  appKey: APP_KEY
+});
+
+var saveMessage = document.querySelector("#message form")
+// 批量获取
+fetchList()
+function fetchList(){
+    var query = new AV.Query("message");
+    query.find().then(function (todos) {
+        for(let i = 0;i<todos.length;i++){
+            let name = todos[i].attributes.names
+            let content = todos[i].attributes.words
+            var li = document.createElement("li")
+            li.innerText = name+"："+content
+            var list = document.querySelector(".messageList ul")
+            list.appendChild(li)
+        }
+    });
+}
+saveMessage.addEventListener("submit",function(event){
+    event.preventDefault()
+    var message = AV.Object.extend("message");
+    var newMessage = new message();
+    var name = saveMessage.querySelector('input[name=name]').value
+    let content = saveMessage.querySelector('input[name=content]').value
+    newMessage.save({
+      words: content,
+      names:name
+    }).then(function(object) {
+        var li = document.createElement("li")
+        li.innerText = name+"："+content
+        var list = document.querySelector(".messageList ul")
+        list.appendChild(li)
+        saveMessage.querySelector('input[name=content]').value = ""
+    })
+})
+
