@@ -57,7 +57,7 @@ li,ul{list-style: none;}
 }
 .picture img{
     float: left;
-    width: 250px;
+    width: 220px;
     height: 300px;
 }
 .text{
@@ -138,8 +138,11 @@ section{
     font-size: 20px;
 }
 .introduction{
-    font: 16px "KaiTi";
     text-align: center;
+}
+.introduction dt{
+    font-weight: bold;
+    margin: 10px 0;
 }
 /* 技能 */
 .skills{
@@ -150,7 +153,7 @@ section{
     font-size: 20px;
     text-align: center;
 }
-.skills>div{
+.skills>div:nth-child(2){
     max-width: 850px;
     padding: 50px;
     background-color: white;
